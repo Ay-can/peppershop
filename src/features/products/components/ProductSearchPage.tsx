@@ -1,21 +1,17 @@
 import { products } from "../data/products";
-import style from "./ProductSearchPage.module.css";
+import { useProductFilters } from "../hooks/useProductFilters";
+import { ProductFilters } from "./ProductFilters";
+import { ProductGrid } from "./ProductGrid";
 
 const ProductSearchPage = () => {
+  const { filters, setFilters, filteredProducts } = useProductFilters(products);
+
   return (
-    <>
-      <h1>Test</h1>
-      <div className={style.gridContainer}>
-        {products.map((product) => (
-          <div className={style.gridItem}>
-            <p>{product.name}</p>
-            <p>{product.category}</p>
-            <p>{product.scoville}</p>
-            <p>{product.price}</p>
-          </div>
-        ))}
-      </div>
-    </>
+    <div>
+      <ProductFilters filters={filters} setFilters={setFilters} />
+
+      <ProductGrid products={filteredProducts} />
+    </div>
   );
 };
 
