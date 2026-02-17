@@ -9,7 +9,7 @@ export function SearchInput({ value, onChange }: Props) {
       type="text"
       value={value}
       onChange={(e) => onChange(e.target.value)}
-      placeholder="Search products...."
+      placeholder="Bijv. Carolina Reaper"
     />
   );
 }

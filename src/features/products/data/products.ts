@@ -1,4 +1,6 @@
 import type { Product } from "../types/product.types";
+import carolina from "../../../assets/product_carolina_reaper.jpg";
+import habanero from "../../../assets/product_habanero.jpg";
 
 export const products: Product[] = [
   {
@@ -9,7 +11,7 @@ export const products: Product[] = [
     price: 2.99,
     scoville: 500,
     color: "groen",
-    image: "",
+    image: carolina,
   },
   {
     id: "2",
@@ -19,7 +21,7 @@ export const products: Product[] = [
     price: 1.49,
     scoville: 2_000,
     color: "geel",
-    image: "",
+    image: habanero,
   },
   {
     id: "3",
@@ -29,7 +31,7 @@ export const products: Product[] = [
     price: 3.49,
     scoville: 100_000,
     color: "oranje",
-    image: "",
+    image: habanero,
   },
   {
     id: "4",
@@ -39,7 +41,7 @@ export const products: Product[] = [
     price: 2.29,
     scoville: 0,
     color: "groen",
-    image: "",
+    image: carolina,
   },
   {
     id: "5",
@@ -49,7 +51,7 @@ export const products: Product[] = [
     price: 1.99,
     scoville: 200_000,
     color: "oranje",
-    image: "",
+    image: carolina,
   },
   {
     id: "6",
@@ -59,7 +61,7 @@ export const products: Product[] = [
     price: 2.79,
     scoville: 70_000,
     color: "geel",
-    image: "",
+    image: carolina,
   },
   {
     id: "7",
@@ -69,7 +71,7 @@ export const products: Product[] = [
     price: 4.99,
     scoville: 2_200_000,
     color: "rood",
-    image: "",
+    image: carolina,
   },
   {
     id: "8",
@@ -79,7 +81,7 @@ export const products: Product[] = [
     price: 3.79,
     scoville: 350_000,
     color: "oranje",
-    image: "",
+    image: carolina,
   },
   {
     id: "9",
@@ -89,7 +91,7 @@ export const products: Product[] = [
     price: 3.99,
     scoville: 30_000,
     color: "geel",
-    image: "",
+    image: carolina,
   },
   {
     id: "10",
@@ -99,6 +101,6 @@ export const products: Product[] = [
     price: 2.49,
     scoville: 10_000,
     color: "groen",
-    image: "",
+    image: carolina,
   },
 ];

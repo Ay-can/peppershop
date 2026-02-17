@@ -1,0 +1,51 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  padding: 16px;
+  gap: 6px;
+}
+
+.colorLabel {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+}
+
+.colorInput {
+  display: none;
+}
+
+.colorCircle {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+}
+
+.colorInput:checked + .colorCircle {
+  border: 1px solid grey;
+  transform: scale(1.1);
+}
+
+.rood {
+  background: red;
+}
+.groen {
+  background: green;
+}
+.geel {
+  background: gold;
+}
+.oranje {
+  background: orange;
+}
+.all {
+  background: transparent;
+}
+
+.colorInput:checked + .all {
+  background: black;
+}

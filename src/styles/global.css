@@ -1,0 +1,38 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Base styles */
+html,
+body {
+  height: 100%;
+  font-family: "Inter", system-ui, sans-serif;
+  line-height: 1.5;
+  color: #111;
+  background: #fff;
+  scroll-behavior: smooth;
+}
+
+/* Links */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Images */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Buttons */
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font: inherit;
+}

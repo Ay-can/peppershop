@@ -1,9 +1,16 @@
+import { Navbar } from "../shared/components/Navbar";
 import ProductSearchPage from "../features/products/components/ProductSearchPage";
+
+const links = [
+  { label: "Home", href: "/" },
+  { label: "Catalogus", href: "/" },
+  { label: "Winkelwagen", href: "/" },
+];
 
 function App() {
   return (
     <>
-      <h1>Let's do this!</h1>
+      <Navbar brand="Peppershop" links={links} />
       <ProductSearchPage />
     </>
   );

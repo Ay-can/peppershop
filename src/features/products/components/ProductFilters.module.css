@@ -1,7 +1,9 @@
 .filters {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  padding: 16px;
-  border-right: 1px solid #ddd;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.filter {
+  padding: 32px;
+  border: 1px solid #ddd;
 }

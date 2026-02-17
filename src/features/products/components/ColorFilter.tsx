@@ -1,4 +1,5 @@
 import type { ProductColor } from "../types/product.types";
+import style from "./ColorFilter.module.css";
 
 interface Props {
   value: ProductColor | "all";
@@ -15,15 +16,17 @@ export function ColorFilter({ value, onChange }: Props) {
   ];
 
   return (
-    <div>
+    <div className={style.container}>
       {colors.map((color) => (
-        <label key={color}>
+        <label key={color} className={style.colorLabel}>
           <input
             type="radio"
             value={color}
             checked={value === color}
             onChange={() => onChange(color)}
+            className={style.colorInput}
           />
+          <span className={`${style.colorCircle} ${style[color]}`} />
           {color}
         </label>
       ))}
