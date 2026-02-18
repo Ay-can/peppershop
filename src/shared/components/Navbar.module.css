@@ -33,6 +33,6 @@
 }
 
 .link:hover {
-  color: red;
-  border-bottom: 2px solid red;
+  color: darkred;
+  border-bottom: 2px solid darkred;
 }

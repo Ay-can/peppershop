@@ -28,7 +28,7 @@ export function ColorFilter({ value, onChange }: Props) {
             className={style.colorInput}
           />
           <Colordot
-            className={value === color ? style.selected : ""}
+            className={`${style[color]} ${value === color ? style.selected : ""}`}
             color={color}
           />
           {color}

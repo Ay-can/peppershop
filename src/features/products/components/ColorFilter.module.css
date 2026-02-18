@@ -42,10 +42,7 @@
 .oranje {
   background: orange;
 }
-.all {
-  background: transparent;
-}
 
-.colorInput:checked + .all {
+.all.selected {
   background: black;
 }
