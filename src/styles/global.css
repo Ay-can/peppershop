@@ -6,7 +6,6 @@
   padding: 0;
 }
 
-/* Base styles */
 html,
 body {
   height: 100%;
@@ -17,19 +16,16 @@ body {
   scroll-behavior: smooth;
 }
 
-/* Links */
 a {
   text-decoration: none;
   color: inherit;
 }
 
-/* Images */
 img {
   max-width: 100%;
   display: block;
 }
 
-/* Buttons */
 button {
   cursor: pointer;
   border: none;

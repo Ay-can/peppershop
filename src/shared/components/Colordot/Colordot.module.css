@@ -1,0 +1,22 @@
+.dot {
+  border-radius: 50%;
+  border: 2px solid #ccc;
+  display: inline-block;
+}
+
+/* kleuren */
+.rood {
+  background: red;
+}
+.groen {
+  background: green;
+}
+.geel {
+  background: gold;
+}
+.oranje {
+  background: orange;
+}
+.all {
+  background: black;
+}
