@@ -1,3 +1,4 @@
+import { Colordot } from "../../../shared/components/Colordot/Colordot";
 import type { ProductColor } from "../types/product.types";
 import style from "./ColorFilter.module.css";
 
@@ -26,7 +27,10 @@ export function ColorFilter({ value, onChange }: Props) {
             onChange={() => onChange(color)}
             className={style.colorInput}
           />
-          <span className={`${style.colorCircle} ${style[color]}`} />
+          <Colordot
+            className={value === color ? style.selected : ""}
+            color={color}
+          />
           {color}
         </label>
       ))}

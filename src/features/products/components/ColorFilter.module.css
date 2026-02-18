@@ -25,7 +25,7 @@
   border: 2px solid #ccc;
 }
 
-.colorInput:checked + .colorCircle {
+.selected {
   border: 1px solid grey;
   transform: scale(1.1);
 }
