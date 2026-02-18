@@ -1,3 +1,5 @@
+import style from "./SearchInput.module.css";
+
 interface Props {
   value: string;
   onChange: (value: string) => void;
@@ -6,6 +8,7 @@ interface Props {
 export function SearchInput({ value, onChange }: Props) {
   return (
     <input
+      className={style.input}
       type="text"
       value={value}
       onChange={(e) => onChange(e.target.value)}

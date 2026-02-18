@@ -3,5 +3,5 @@
   grid-template-columns: repeat(auto-fill, minmax(280px, 300px));
   justify-content: center;
   gap: 32px;
-  margin-top: 16px;
+  padding: 32px 64px;
 }
