@@ -1,6 +1,9 @@
 import type { Product } from "../types/product.types";
-import carolina from "../../../assets/product_carolina_reaper.jpg";
-import habanero from "../../../assets/product_habanero.jpg";
+import pepper from "../../../assets/pepper.jpg";
+import greenPepper from "../../../assets/green-pepper.jpg";
+import longPepper from "../../../assets/long-pepper.jpg";
+import redGreenPepper from "../../../assets/red-green-pepper.jpg";
+import smallHotPeppers from "../../../assets/small-hot-peppers.jpg";
 
 export const products: Product[] = [
   {
@@ -11,7 +14,7 @@ export const products: Product[] = [
     price: 2.99,
     scoville: 500,
     color: "groen",
-    image: carolina,
+    image: pepper,
   },
   {
     id: "2",
@@ -21,7 +24,7 @@ export const products: Product[] = [
     price: 1.49,
     scoville: 2_000,
     color: "geel",
-    image: habanero,
+    image: longPepper,
   },
   {
     id: "3",
@@ -31,7 +34,7 @@ export const products: Product[] = [
     price: 3.49,
     scoville: 100_000,
     color: "oranje",
-    image: habanero,
+    image: greenPepper,
   },
   {
     id: "4",
@@ -41,7 +44,7 @@ export const products: Product[] = [
     price: 2.29,
     scoville: 0,
     color: "groen",
-    image: carolina,
+    image: longPepper,
   },
   {
     id: "5",
@@ -51,7 +54,7 @@ export const products: Product[] = [
     price: 1.99,
     scoville: 200_000,
     color: "oranje",
-    image: carolina,
+    image: pepper,
   },
   {
     id: "6",
@@ -61,7 +64,7 @@ export const products: Product[] = [
     price: 2.79,
     scoville: 70_000,
     color: "geel",
-    image: carolina,
+    image: redGreenPepper,
   },
   {
     id: "7",
@@ -71,7 +74,7 @@ export const products: Product[] = [
     price: 4.99,
     scoville: 2_200_000,
     color: "rood",
-    image: carolina,
+    image: smallHotPeppers,
   },
   {
     id: "8",
@@ -81,7 +84,7 @@ export const products: Product[] = [
     price: 3.79,
     scoville: 350_000,
     color: "oranje",
-    image: carolina,
+    image: redGreenPepper,
   },
   {
     id: "9",
@@ -91,7 +94,7 @@ export const products: Product[] = [
     price: 3.99,
     scoville: 30_000,
     color: "geel",
-    image: carolina,
+    image: pepper,
   },
   {
     id: "10",
@@ -101,6 +104,6 @@ export const products: Product[] = [
     price: 2.49,
     scoville: 10_000,
     color: "groen",
-    image: carolina,
+    image: smallHotPeppers,
   },
 ];
