@@ -1,6 +1,7 @@
 .navbar {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   align-items: center;
   padding: 32px;
   border-radius: 10px;
@@ -22,6 +23,7 @@
 
 .links {
   display: flex;
+  flex-wrap: wrap;
   gap: 16px;
 }
 
