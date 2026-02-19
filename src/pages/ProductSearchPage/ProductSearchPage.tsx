@@ -1,7 +1,7 @@
-import { products } from "../data/products";
-import { useProductFilters } from "../hooks/useProductFilters";
-import { ProductFilters } from "./ProductFilters";
-import { ProductGrid } from "./ProductGrid";
+import { products } from "../../features/products/data/products.ts";
+import { useProductFilters } from "../../features/products/hooks/useProductFilters.ts";
+import { ProductFilters } from "../../features/products/components/ProductFilters/ProductFilters.tsx";
+import { ProductGrid } from "../../features/products/components/ProductGrid/ProductGrid.tsx";
 import style from "./ProductSearchPage.module.css";
 
 const ProductSearchPage = () => {

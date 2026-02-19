@@ -1,5 +1,5 @@
 import { Navbar } from "../shared/components/Navbar";
-import ProductSearchPage from "../features/products/components/ProductSearchPage";
+import ProductSearchPage from "../pages/ProductSearchPage/ProductSearchPage";
 
 const links = [
   { label: "Home", href: "/" },

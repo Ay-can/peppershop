@@ -1,10 +1,10 @@
 import type React from "react";
-import type { ProductFilters } from "../types/product.types";
+import type { ProductFilters } from "../../types/product.types.ts";
 import style from "./ProductFilters.module.css";
-import { SearchInput } from "./SearchInput";
-import { ColorFilter } from "./ColorFilter";
-import { ScovilleSlider } from "./ScovilleSlider";
-import { FilterSection } from "./FilterSection/Filtersection";
+import { SearchInput } from "../SearchInput/SearchInput.tsx";
+import { ColorFilter } from "../ColorFilter/ColorFilter.tsx";
+import { ScovilleSlider } from "../ScovilleSlider/ScovilleSlider.tsx";
+import { FilterSection } from "../FilterSection/Filtersection.tsx";
 
 interface Props {
   filters: ProductFilters;

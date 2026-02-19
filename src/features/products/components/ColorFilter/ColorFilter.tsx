@@ -1,5 +1,5 @@
-import { ColorBadge } from "../../../shared/components/Colorbadge/Colorbadge";
-import type { ProductColor } from "../types/product.types";
+import { ColorBadge } from "../../../../shared/components/Colorbadge/Colorbadge.tsx";
+import type { ProductColor } from "../../types/product.types.ts";
 import style from "./ColorFilter.module.css";
 
 interface Props {

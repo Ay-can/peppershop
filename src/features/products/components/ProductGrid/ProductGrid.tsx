@@ -1,5 +1,5 @@
-import type { Product } from "../types/product.types";
-import { ProductCard } from "./ProductCard";
+import type { Product } from "../../types/product.types.ts";
+import { ProductCard } from "../ProductCard/ProductCard.tsx";
 import style from "./ProductGrid.module.css";
 
 interface Props {
