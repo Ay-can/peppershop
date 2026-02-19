@@ -1,4 +1,4 @@
-import { Colordot } from "../../../shared/components/Colordot/Colordot";
+import { ColorBadge } from "../../../shared/components/Colorbadge/Colorbadge";
 import type { Product } from "../types/product.types";
 import style from "./ProductCard.module.css";
 
@@ -22,8 +22,7 @@ export function ProductCard({ product }: Props) {
         <div className={style.productMeta}>
           <p>Scoville: {product.scoville.toLocaleString("nl-NL")}</p>
           <div className={style.colorContainer}>
-            <Colordot color={product.color} />
-            <p>{product.color}</p>
+            <ColorBadge color={product.color} />
           </div>
         </div>
         <p className={style.price}>€{product.price.toFixed(2)}</p>

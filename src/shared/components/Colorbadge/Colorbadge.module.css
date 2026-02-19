@@ -1,0 +1,23 @@
+.badge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.selected {
+  transform: scale(1.1);
+  transition: transform 0.2s ease;
+}
+
+.rood {
+  color: red;
+}
+.groen {
+  color: green;
+}
+.geel {
+  color: gold;
+}
+.oranje {
+  color: orange;
+}

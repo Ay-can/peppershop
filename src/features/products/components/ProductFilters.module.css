@@ -1,9 +1,5 @@
 .filters {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-}
-
-.filter {
-  padding: 32px;
-  border: 1px solid #ddd;
+  gap: 1px;
 }

@@ -1,5 +1,3 @@
-.filtersSection {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, 1fr);
-  padding: 30px;
+.filtersSectionContainer {
+  padding: 40px 100px;
 }

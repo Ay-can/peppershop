@@ -9,8 +9,7 @@ const ProductSearchPage = () => {
 
   return (
     <>
-      <div className={style.filtersSection}>
-        <h2>PepperShop</h2>
+      <div className={style.filtersSectionContainer}>
         <ProductFilters filters={filters} setFilters={setFilters} />
       </div>
       <ProductGrid products={filteredProducts} />

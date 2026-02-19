@@ -12,7 +12,7 @@ body {
   font-family: "Inter", system-ui, sans-serif;
   line-height: 1.5;
   color: #111;
-  background: #fff;
+  background: #f7f7f7;
   scroll-behavior: smooth;
 }
 
@@ -31,4 +31,11 @@ button {
   border: none;
   background: none;
   font: inherit;
+}
+
+p::first-letter {
+  text-transform: capitalize;
+}
+span::first-letter {
+  text-transform: capitalize;
 }

@@ -1,4 +1,4 @@
-import { Colordot } from "../../../shared/components/Colordot/Colordot";
+import { ColorBadge } from "../../../shared/components/Colorbadge/Colorbadge";
 import type { ProductColor } from "../types/product.types";
 import style from "./ColorFilter.module.css";
 
@@ -27,11 +27,7 @@ export function ColorFilter({ value, onChange }: Props) {
             onChange={() => onChange(color)}
             className={style.colorInput}
           />
-          <Colordot
-            className={`${style[color]} ${value === color ? style.selected : ""}`}
-            color={color}
-          />
-          {color}
+          <ColorBadge color={color} selected={value === color} />
         </label>
       ))}
     </div>

@@ -4,6 +4,7 @@ import style from "./ProductFilters.module.css";
 import { SearchInput } from "./SearchInput";
 import { ColorFilter } from "./ColorFilter";
 import { ScovilleSlider } from "./ScovilleSlider";
+import { FilterSection } from "./FilterSection/Filtersection";
 
 interface Props {
   filters: ProductFilters;
@@ -13,31 +14,32 @@ interface Props {
 export function ProductFilters({ filters, setFilters }: Props) {
   return (
     <div className={style.filters}>
-      <div className={style.filter}>
-        <h3>Zoek op naam: </h3>
+      <FilterSection title="Zoek op naam">
         <SearchInput
           value={filters.searchTerm}
           onChange={(value) =>
             setFilters((prev) => ({ ...prev, searchTerm: value }))
           }
         />
-      </div>
-      <div className={style.filter}>
+      </FilterSection>
+
+      <FilterSection title="Maximale pittigheid (Scoville)">
         <ScovilleSlider
           value={filters.maxScoville}
           onChange={(value) =>
             setFilters((prev) => ({ ...prev, maxScoville: value }))
           }
         />
-      </div>
-      <div className={style.filter}>
+      </FilterSection>
+
+      <FilterSection title="Kleur">
         <ColorFilter
           value={filters.selectedColor}
           onChange={(value) =>
             setFilters((prev) => ({ ...prev, selectedColor: value }))
           }
         />
-      </div>
+      </FilterSection>
     </div>
   );
 }

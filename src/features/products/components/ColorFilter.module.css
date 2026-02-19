@@ -2,7 +2,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid black;
   padding: 16px;
   gap: 6px;
 }
@@ -31,16 +30,16 @@
 }
 
 .rood {
-  background: red;
+  color: red;
 }
 .groen {
-  background: green;
+  color: green;
 }
 .geel {
-  background: gold;
+  color: gold;
 }
 .oranje {
-  background: orange;
+  color: orange;
 }
 
 .all.selected {
