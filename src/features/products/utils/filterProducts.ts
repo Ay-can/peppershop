@@ -13,7 +13,7 @@ export function filterProducts(
     const matchesScoville = product.scoville <= filters.maxScoville;
 
     const matchesColor =
-      filters.selectedColor === "all" ||
+      filters.selectedColor === "alle" ||
       product.color === filters.selectedColor;
 
     return matchesSearch && matchesScoville && matchesColor;

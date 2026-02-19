@@ -22,7 +22,7 @@ export function ProductCard({ product }: Props) {
         <div className={style.productMeta}>
           <p>Scoville: {product.scoville.toLocaleString("nl-NL")}</p>
           <div className={style.colorContainer}>
-            <ColorBadge color={product.color} />
+            <ColorBadge color={product.color} selected={true} />
           </div>
         </div>
         <p className={style.price}>€{product.price.toLocaleString("nl-NL")}</p>

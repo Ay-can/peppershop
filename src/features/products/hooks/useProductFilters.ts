@@ -6,7 +6,7 @@ export function useProductFilters(products: Product[]) {
   const [filters, setFilters] = useState<ProductFilters>({
     searchTerm: "",
     maxScoville: 2_500_000,
-    selectedColor: "all",
+    selectedColor: "alle",
   });
 
   const filteredProducts = useMemo(() => {

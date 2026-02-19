@@ -21,5 +21,5 @@ export interface Product {
 export interface ProductFilters {
   searchTerm: string;
   maxScoville: number;
-  selectedColor: ProductColor | "all";
+  selectedColor: ProductColor | "alle";
 }

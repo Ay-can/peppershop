@@ -1,20 +1,11 @@
-import type { ProductColor } from "../../../features/products/types/product.types";
-import { Colordot } from "../Colordot/Colordot";
+import type { ProductColor } from "../../../features/products/types/product.types.ts";
 import style from "./Colorbadge.module.css";
 
 interface Props {
-  color: ProductColor | "all";
+  color: ProductColor | "alle";
   selected?: boolean;
   onClick?: () => void;
 }
-
-const colorLabels: Record<ProductColor | "all", string> = {
-  all: "Alle",
-  rood: "Rood",
-  groen: "Groen",
-  geel: "Geel",
-  oranje: "Oranje",
-};
 
 export function ColorBadge({ color, selected = false, onClick }: Props) {
   return (
@@ -22,10 +13,8 @@ export function ColorBadge({ color, selected = false, onClick }: Props) {
       className={`${style.badge} ${selected ? style.selected : ""}`}
       onClick={onClick}
     >
-      <Colordot className={selected ? "selected" : ""} color={color} />
-      <span className={color !== "all" ? style[color] : ""}>
-        {colorLabels[color]}
-      </span>
+      <span className={`${style.dot} ${style[color]}`} />
+      <span className={`${style.label} ${style[color]}`}>{color}</span>
     </div>
   );
 }

@@ -3,13 +3,13 @@ import type { ProductColor } from "../../types/product.types.ts";
 import style from "./ColorFilter.module.css";
 
 interface Props {
-  value: ProductColor | "all";
-  onChange: (value: ProductColor | "all") => void;
+  value: ProductColor | "alle";
+  onChange: (value: ProductColor | "alle") => void;
 }
 
 export function ColorFilter({ value, onChange }: Props) {
-  const colors: (ProductColor | "all")[] = [
-    "all",
+  const colors: (ProductColor | "alle")[] = [
+    "alle",
     "rood",
     "groen",
     "geel",
@@ -22,7 +22,6 @@ export function ColorFilter({ value, onChange }: Props) {
         <label key={color} className={style.colorLabel}>
           <input
             type="radio"
-            value={color}
             checked={value === color}
             onChange={() => onChange(color)}
             className={style.colorInput}

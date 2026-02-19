@@ -2,22 +2,52 @@
   display: flex;
   align-items: center;
   gap: 6px;
+  cursor: pointer;
 }
 
-.selected {
-  transform: scale(1.1);
-  transition: transform 0.2s ease;
+.label {
+  text-transform: capitalize;
+  font-weight: 500;
 }
 
-.rood {
+.dot {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+  transition: transform 0.15s ease;
+  background: transparent;
+}
+
+.selected .dot.rood {
+  background: red;
+}
+.selected .dot.groen {
+  background: green;
+}
+.selected .dot.geel {
+  background: gold;
+}
+.selected .dot.oranje {
+  background: orange;
+}
+
+.label.rood {
   color: red;
 }
-.groen {
+.label.groen {
   color: green;
 }
-.geel {
+.label.geel {
   color: gold;
 }
-.oranje {
+.label.oranje {
   color: orange;
+}
+
+.selected .dot.alle {
+  background: black;
+}
+.label.alle {
+  color: black;
 }
