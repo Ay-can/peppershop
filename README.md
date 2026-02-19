@@ -1,5 +1,8 @@
 # Peppershop Front-end
 
+## Live demo
+https://peppershop-mauve.vercel.app/
+
 ## Project starten
 
 Om het project lokaal te draaien:
