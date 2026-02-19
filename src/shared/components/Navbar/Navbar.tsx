@@ -1,5 +1,5 @@
 import style from "./Navbar.module.css";
-import pepperIcon from "../../assets/pepper-icon.png";
+import pepperIcon from "../../../assets/pepper-icon.png";
 
 interface Props {
   brand?: string;

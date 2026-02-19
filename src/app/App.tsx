@@ -1,10 +1,10 @@
-import { Navbar } from "../shared/components/Navbar";
+import { Navbar } from "../shared/components/Navbar/Navbar.tsx";
 import ProductSearchPage from "../pages/ProductSearchPage/ProductSearchPage";
 
 const links = [
-  { label: "Home", href: "/" },
-  { label: "Catalogus", href: "/" },
-  { label: "Winkelwagen", href: "/" },
+  { label: "Home", href: "#" },
+  { label: "Catalogus", href: "##" },
+  { label: "Winkelwagen", href: "###" },
 ];
 
 function App() {

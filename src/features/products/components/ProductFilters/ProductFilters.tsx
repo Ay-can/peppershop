@@ -4,7 +4,7 @@ import style from "./ProductFilters.module.css";
 import { SearchInput } from "../SearchInput/SearchInput.tsx";
 import { ColorFilter } from "../ColorFilter/ColorFilter.tsx";
 import { ScovilleSlider } from "../ScovilleSlider/ScovilleSlider.tsx";
-import { FilterSection } from "../FilterSection/Filtersection.tsx";
+import { FilterSection } from "../Filtersection/Filtersection.tsx";
 
 interface Props {
   filters: ProductFilters;
