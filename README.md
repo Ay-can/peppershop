@@ -1,73 +1,49 @@
-# React + TypeScript + Vite
+# Peppershop Front-end
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Project starten
 
-Currently, two official plugins are available:
+Om het project lokaal te draaien:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+```bash
+# 1. Clone de repository
+git clone <repository-url>
 
-## React Compiler
+# 2. Navigeer naar de projectfolder
+cd peppershop
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+# 3. Installeer dependencies
+npm install
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+# 4. Start de dev server
+npm run dev
 ```
+Er zal vervolgens een server opstarten op localhost:5173
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Architectuur en keuzes
+### Feature-based architectuur
+- De front-end heb ik gedeelt in mappen per feature, in dit geval dus het feature voor producten met de bijbehorende componenten en utils in dezelfde feature map. In het geval van uitbreiding zou je andere feature mappen maken bijvoorbeeld feature/cart voor de winkelwagen met eventueel de bijbehorende componenten.
+Dit maakt het gescheiden en makkelijk uitbreidbaar, shared components zijn apart te vinden in een map met shared components.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### CSS Modules
+Styling is lokaal gescoped per component door het gebruik maak van Modules die ervoor zorgen dat we geen global conflicts hebben en alles goed samenkoppelt, ik vind dit fijn omdat ik gelijk weet waar ik moet zijn om de style van een bepaalde component aan te passen, ook houdt het alles netjes gescheiden en relatief compact.
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- features/products bevat alles rondom producten: componenten, data, types etc.
+- shared/components bevat de herbruikbare componenten
+- pages/ bevat de paginas.
+
+## Filters en dataflow
+- Filters worden beheerd via de hook `useProductFilters`
+- Filters:
+  - SearchTerm -> zoekt op productnaam case insensitive
+  - maxScoville -> filtert op maximale pittigheid
+  - selectedColor -> filtert op productkleur
+
+`  const { filters, setFilters, filteredProducts } = useProductFilters(products);`
+ProductFilters component geeft de filter UI weer (SearchInput, ColorFilter, ScovilleSlider)
+utils/filterProducts wordt gebruikt in de hook om de juiste producten te tonen.
+
+## Verbeterpunten
+- Maak gebruik van css variables
+- Meer aandacht op responsiveness voor mobiel
+- React router voor single pages
+- Gebruik maken van test bibliotheek(Playwright, Jest)
