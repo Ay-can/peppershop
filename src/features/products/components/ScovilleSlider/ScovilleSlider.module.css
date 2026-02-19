@@ -14,7 +14,6 @@
   transition: background 0.2s ease;
 }
 
-/* Thumb */
 .slider::-webkit-slider-thumb {
   appearance: none;
   width: 20px;
@@ -37,4 +36,9 @@
 
 .slider:hover::-webkit-slider-thumb {
   box-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
+}
+
+.sliderInfo {
+  display: flex;
+  justify-content: space-between;
 }

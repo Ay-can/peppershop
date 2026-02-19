@@ -25,7 +25,7 @@ export function ProductCard({ product }: Props) {
             <ColorBadge color={product.color} />
           </div>
         </div>
-        <p className={style.price}>€{product.price.toFixed(2)}</p>
+        <p className={style.price}>€{product.price.toLocaleString("nl-NL")}</p>
         <button className={style.addButton}>Toevoegen aan winkelwagen</button>
       </div>
     </div>

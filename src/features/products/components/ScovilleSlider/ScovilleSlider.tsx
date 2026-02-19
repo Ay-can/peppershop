@@ -22,7 +22,10 @@ export function ScovilleSlider({ value, onChange }: Props) {
         onChange={(e) => onChange(Number(e.target.value))}
         style={{ "--fill-percentage": `${percentage}%` } as React.CSSProperties}
       />
-      <span>Max Scoville: {value}</span>
+      <div className={style.sliderInfo}>
+        <span>{value.toLocaleString("nl-NL")}</span>
+        <span>{max.toLocaleString("nl-NL")}</span>
+      </div>
     </div>
   );
 }
