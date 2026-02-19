@@ -46,5 +46,5 @@ De styling vind je samen met het component, dus `features/products/components/Pr
 ## Verbeterpunten
 - Maak gebruik van css variables
 - Meer aandacht op responsiveness voor mobiel
-- React router voor single pages
+- React router voor single pages en pagination
 - Gebruik maken van test bibliotheek(Playwright, Jest)
