@@ -1,7 +1,7 @@
 .container {
   display: flex;
   flex-wrap: wrap;
-  gap: 16px;
+  gap: 10px;
 }
 
 .colorLabel {
